@@ -1,870 +1,402 @@
 <!doctype html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>The University of Tampa | Find Your Future</title>
 
-
-    <!-- GOOGLE FONTS -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-
-    <!-- BOOTSTRAP -->
+        rel="stylesheet">
 
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
+        rel="stylesheet">
 
-
-    <!-- CUSTOM CSS -->
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-
-    <!-- =====================================
-         NAVIGATION
-    ====================================== -->
-
+    <!-- NAV -->
     <nav class="navbar navbar-expand-lg ut-navbar">
-
         <div class="container">
 
-
-            <!-- LOGO -->
-
-            <a
-                class="navbar-brand ut-brand"
-                href="index.html"
-            >
-
-                <img
-                    src="ut-logo.png"
-                    alt="The University of Tampa"
-                    class="ut-logo"
-                >
-
+            <a class="navbar-brand" href="index.html">
+                <img src="ut-logo.png"
+                     alt="The University of Tampa"
+                     class="ut-logo">
             </a>
 
-
-            <!-- MOBILE MENU BUTTON -->
-
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNav"
-                aria-controls="mainNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNav"
+                    aria-controls="mainNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-
             </button>
 
-
-            <!-- NAVIGATION LINKS -->
-
-            <div
-                class="collapse navbar-collapse"
-                id="mainNav"
-            >
+            <div class="collapse navbar-collapse" id="mainNav">
 
                 <ul class="navbar-nav ms-auto align-items-lg-center">
 
                     <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="about.html"
-                        >
-                            ABOUT
-                        </a>
-
+                        <a class="nav-link" href="about.html">ABOUT</a>
                     </li>
 
-
                     <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="programs.html"
-                        >
-                            PROGRAMS
-                        </a>
-
+                        <a class="nav-link" href="programs.html">PROGRAMS</a>
                     </li>
 
-
                     <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="student-life.html"
-                        >
-                            STUDENT LIFE
-                        </a>
-
+                        <a class="nav-link" href="student-life.html">STUDENT LIFE</a>
                     </li>
 
-
                     <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="admissions.html"
-                        >
-                            ADMISSIONS
-                        </a>
-
+                        <a class="nav-link" href="admissions.html">ADMISSIONS</a>
                     </li>
 
-
                     <li class="nav-item">
-
-                        <a
-                            class="nav-link visit-nav"
-                            href="visit.html"
-                        >
-                            VISIT
-                        </a>
-
+                        <a class="nav-link visit-nav" href="visit.html">VISIT</a>
                     </li>
 
                 </ul>
-
             </div>
-
         </div>
-
     </nav>
-
 
 
     <main>
 
+        <!-- VIDEO HERO -->
+        <section class="home-hero">
 
-        <!-- =====================================
-             VIDEO HERO
-        ====================================== -->
+            <video class="hero-video"
+                   id="heroVideo"
+                   autoplay
+                   muted
+                   loop
+                   playsinline
+                   poster="tampa-hero.jpg">
 
-        <section class="ut-hero">
-
-
-            <!-- BACKGROUND VIDEO -->
-
-            <video
-                class="hero-video"
-                id="heroVideo"
-                autoplay
-                muted
-                loop
-                playsinline
-                poster="tampa-hero.jpg"
-            >
-
-                <source
-                    src="ut-hero.mp4"
-                    type="video/mp4"
-                >
-
-                Your browser does not support background video.
+                <source src="ut-hero.mp4" type="video/mp4">
 
             </video>
 
+            <div class="hero-overlay"></div>
 
-            <!-- DARK OVERLAY -->
+            <div class="container hero-content">
 
-            <div class="ut-hero-overlay"></div>
+                <p class="eyebrow light-eyebrow">
+                    THE UNIVERSITY OF TAMPA
+                </p>
 
+                <h1>
+                    Your Future Looks
+                    <br>
+                    Good From Here.
+                </h1>
 
-            <!-- HERO TEXT -->
+                <p class="hero-description">
+                    Learn, live and build your future in the heart
+                    of one of Florida's most exciting cities.
+                </p>
 
-            <div class="container ut-hero-content">
+                <div class="hero-actions">
 
-                <div class="row">
+                    <a href="programs.html" class="btn button-light">
+                        EXPLORE UT →
+                    </a>
 
-                    <div class="col-lg-8">
-
-
-                        <p class="eyebrow hero-eyebrow">
-                            THE UNIVERSITY OF TAMPA
-                        </p>
-
-
-                        <h1>
-                            Your Future Looks
-                            <br>
-                            Good From Here.
-                        </h1>
-
-
-                        <p class="hero-description">
-
-                            Learn, live, and build your future
-                            in the heart of Tampa.
-
-                        </p>
-
-
-                        <div class="hero-buttons">
-
-                            <a
-                                href="about.html"
-                                class="btn hero-main-button"
-                            >
-                                EXPLORE UT →
-                            </a>
-
-
-                            <a
-                                href="visit.html"
-                                class="btn hero-second-button"
-                            >
-                                PLAN A VISIT
-                            </a>
-
-                        </div>
-
-
-                    </div>
+                    <a href="visit.html" class="btn button-outline-light">
+                        PLAN A VISIT
+                    </a>
 
                 </div>
-
             </div>
-
-
-            <!-- BOTTOM HERO DETAILS -->
 
             <div class="hero-bottom">
 
+                <span>DISCOVER TAMPA</span>
 
-                <div class="hero-scroll">
+                <button id="videoControl"
+                        class="video-control"
+                        type="button"
+                        aria-label="Pause background video">
 
-                    <span>
-                        DISCOVER TAMPA
-                    </span>
-
-                    <span class="scroll-line"></span>
-
-                </div>
-
-
-                <button
-                    class="video-control"
-                    id="videoControl"
-                    type="button"
-                    aria-label="Pause background video"
-                >
-
-                    <span
-                        class="video-icon"
-                        id="videoIcon"
-                    >
-                        ❚❚
-                    </span>
-
-                    <span id="videoControlText">
-                        PAUSE VIDEO
-                    </span>
+                    <span id="videoIcon">❚❚</span>
+                    <span id="videoControlText">PAUSE VIDEO</span>
 
                 </button>
 
-
             </div>
-
 
         </section>
 
 
-
-        <!-- =====================================
-             INTRO
-        ====================================== -->
-
-        <section class="section ut-intro">
+        <!-- INTRO -->
+        <section class="section cream-section">
 
             <div class="container">
 
+                <div class="two-column reveal">
 
-                <div class="intro-grid reveal">
-
-
-                    <div class="intro-heading">
-
-                        <p class="eyebrow">
-                            LIFE AT UT
-                        </p>
-
+                    <div>
+                        <p class="eyebrow">WELCOME TO UTAMPA</p>
 
                         <h2 class="section-title">
-
                             College in the
                             <br>
                             Heart of Tampa.
-
                         </h2>
-
                     </div>
 
+                    <div class="large-copy-block">
 
-                    <div class="intro-copy">
-
-                        <p>
-
-                            The University of Tampa brings
-                            academics, campus life, and the
-                            energy of the city together in
-                            one unforgettable college experience.
-
+                        <p class="large-copy">
+                            A private university experience surrounded
+                            by the energy of downtown Tampa.
                         </p>
 
-
                         <p>
-
-                            From classrooms and student
-                            organizations to palm-lined paths
-                            and downtown Tampa, students can
-                            discover new interests while building
-                            a community of their own.
-
+                            UTampa brings together historic architecture,
+                            modern learning spaces and a campus community
+                            connected to the city around it.
                         </p>
 
-
-                        <a
-                            href="about.html"
-                            class="text-link"
-                        >
-                            DISCOVER THE UT EXPERIENCE →
+                        <a href="about.html" class="text-link">
+                            DISCOVER UTAMPA →
                         </a>
 
                     </div>
 
-
                 </div>
-
             </div>
-
         </section>
 
 
+        <!-- STUDENT CAMPUS -->
+        <section class="split-feature">
 
-        <!-- =====================================
-             CAMPUS EXPERIENCE
-        ====================================== -->
-
-        <section class="home-campus-feature">
-
-
-            <div class="home-campus-image">
-
-                <img
-                    src="students-campus.jpg"
-                    alt="University of Tampa students walking on campus"
-                >
-
+            <div class="split-image">
+                <img src="students-campus.jpg"
+                     alt="Students walking through the University of Tampa campus">
             </div>
 
+            <div class="split-copy dark-copy">
 
-            <div class="home-campus-copy">
+                <p class="eyebrow light-eyebrow">YOUR CAMPUS</p>
 
-
-                <p class="eyebrow">
-                    FIND YOUR PEOPLE
-                </p>
-
-
-                <h2 class="section-title">
-
+                <h2>
                     More Than a
                     <br>
                     College Campus.
-
                 </h2>
 
-
                 <p>
-
-                    Meet new people, get involved,
-                    explore Tampa and create a college
-                    experience that feels completely
-                    your own.
-
+                    Palm trees, city views and a riverfront location
+                    make UTampa feel completely connected to its
+                    surroundings.
                 </p>
 
-
-                <a
-                    href="student-life.html"
-                    class="btn red-button"
-                >
+                <a href="student-life.html" class="text-link text-link-light">
                     EXPLORE STUDENT LIFE →
                 </a>
 
-
             </div>
-
 
         </section>
 
 
-
-        <!-- =====================================
-             EXPERIENCE
-        ====================================== -->
-
-        <section class="section experience-section">
+        <!-- EXPERIENCE -->
+        <section class="section">
 
             <div class="container">
 
+                <div class="center-heading reveal">
 
-                <p class="eyebrow center">
-                    YOUR UT EXPERIENCE
-                </p>
+                    <p class="eyebrow">THE UTAMPA EXPERIENCE</p>
 
+                    <h2 class="section-title">
+                        Find What You're Looking For.
+                    </h2>
 
-                <h2 class="section-title center">
-                    Find What Moves You.
-                </h2>
-
-
-                <p class="section-copy center">
-
-                    Build your college experience around
-                    what matters to you.
-
-                </p>
+                </div>
 
 
+                <div class="row g-4 home-card-row">
 
-                <div class="home-experience-grid">
-
-
-                    <!-- ACADEMICS -->
-
-                    <article class="home-experience-card reveal">
-
-
-                        <span class="experience-number">
-                            01
-                        </span>
-
-
-                        <div>
-
-                            <p class="card-label">
-                                LEARN
-                            </p>
-
-
-                            <h3>
-                                Academics
-                            </h3>
-
-
+                    <div class="col-md-4">
+                        <article class="home-card reveal">
+                            <span>01</span>
+                            <h3>Academics</h3>
                             <p>
-
-                                Explore programs designed
-                                to turn your interests into
-                                skills, experiences and future
-                                opportunities.
-
+                                Explore more than 200 areas of study
+                                across UTampa's four colleges.
                             </p>
+                            <a href="programs.html">EXPLORE PROGRAMS →</a>
+                        </article>
+                    </div>
 
-
-                            <a
-                                href="programs.html"
-                                class="text-link"
-                            >
-                                VIEW PROGRAMS →
-                            </a>
-
-                        </div>
-
-
-                    </article>
-
-
-
-                    <!-- COMMUNITY -->
-
-                    <article class="home-experience-card reveal">
-
-
-                        <span class="experience-number">
-                            02
-                        </span>
-
-
-                        <div>
-
-                            <p class="card-label">
-                                BELONG
-                            </p>
-
-
-                            <h3>
-                                Community
-                            </h3>
-
-
+                    <div class="col-md-4">
+                        <article class="home-card reveal">
+                            <span>02</span>
+                            <h3>Community</h3>
                             <p>
-
-                                Find friends, organizations,
-                                traditions and experiences
-                                that make campus feel like home.
-
+                                Discover clubs, recreation, campus
+                                traditions and ways to get involved.
                             </p>
+                            <a href="student-life.html">STUDENT LIFE →</a>
+                        </article>
+                    </div>
 
-
-                            <a
-                                href="student-life.html"
-                                class="text-link"
-                            >
-                                DISCOVER CAMPUS LIFE →
-                            </a>
-
-                        </div>
-
-
-                    </article>
-
-
-
-                    <!-- TAMPA -->
-
-                    <article class="home-experience-card reveal">
-
-
-                        <span class="experience-number">
-                            03
-                        </span>
-
-
-                        <div>
-
-                            <p class="card-label">
-                                EXPLORE
-                            </p>
-
-
-                            <h3>
-                                Tampa
-                            </h3>
-
-
+                    <div class="col-md-4">
+                        <article class="home-card reveal">
+                            <span>03</span>
+                            <h3>Tampa</h3>
                             <p>
-
-                                Step beyond campus and experience
-                                a city filled with culture,
-                                entertainment and opportunity.
-
+                                Experience college in a riverfront
+                                campus beside downtown Tampa.
                             </p>
-
-
-                            <a
-                                href="visit.html"
-                                class="text-link"
-                            >
-                                EXPLORE THE LOCATION →
-                            </a>
-
-                        </div>
-
-
-                    </article>
-
+                            <a href="visit.html">EXPLORE TAMPA →</a>
+                        </article>
+                    </div>
 
                 </div>
 
             </div>
-
         </section>
 
 
+        <!-- COMMUNITY -->
+        <section class="community-feature">
 
-        <!-- =====================================
-             STUDENT COMMUNITY
-        ====================================== -->
+            <div class="community-copy reveal">
 
-        <section class="student-community-section">
+                <p class="eyebrow">YOUR COMMUNITY</p>
 
-
-            <div class="student-community-copy reveal">
-
-
-                <p class="eyebrow">
-                    BUILT FOR CONNECTION
-                </p>
-
-
-                <h2 class="section-title">
-
+                <h2>
                     This Is Where
                     <br>
                     You Belong.
-
                 </h2>
 
-
                 <p>
-
-                    College is shaped by the people
-                    you meet along the way. At UT,
-                    campus spaces give students places
-                    to study, connect, recharge and
-                    make memories together.
-
+                    With students from all 50 states and around the
+                    world, UTampa brings different people, interests
+                    and experiences together in one campus community.
                 </p>
 
-
-                <a
-                    href="student-life.html"
-                    class="text-link"
-                >
+                <a href="student-life.html" class="text-link">
                     EXPERIENCE STUDENT LIFE →
                 </a>
 
-
             </div>
 
-
-            <div class="student-community-image">
-
-                <img
-                    src="student-community.jpg"
-                    alt="University of Tampa students spending time together"
-                >
-
+            <div class="community-image">
+                <img src="student-community.jpg"
+                     alt="University of Tampa students spending time together">
             </div>
-
 
         </section>
 
 
+        <!-- TAMPA NIGHT -->
+        <section class="image-banner">
 
-        <!-- =====================================
-             TAMPA FEATURE
-        ====================================== -->
+            <img src="tampa-campus-night.jpg"
+                 alt="University of Tampa and downtown Tampa at night">
 
-        <section class="tampa-feature">
+            <div class="image-banner-overlay"></div>
 
+            <div class="container image-banner-content reveal">
 
-            <div class="tampa-feature-overlay"></div>
-
-
-            <div class="container tampa-feature-content">
-
-
-                <p class="eyebrow">
-                    YOUR CITY. YOUR CAMPUS.
-                </p>
-
+                <p class="eyebrow light-eyebrow">YOUR CITY</p>
 
                 <h2>
-
                     Tampa Is Part
                     <br>
                     of the Experience.
-
                 </h2>
 
-
                 <p>
-
-                    A waterfront campus.
-                    A growing city.
-                    A college experience surrounded
-                    by everything Tampa has to offer.
-
+                    Your college experience doesn't stop at the edge
+                    of campus. Downtown Tampa is right outside.
                 </p>
 
-
-                <a
-                    href="visit.html"
-                    class="btn light-button"
-                >
-                    SEE THE CAMPUS →
+                <a href="visit.html" class="btn button-light">
+                    EXPLORE THE AREA →
                 </a>
 
-
             </div>
-
 
         </section>
 
 
+        <!-- FINAL CTA -->
+        <section class="red-cta">
 
-        <!-- =====================================
-             FINAL CTA
-        ====================================== -->
+            <div class="container cta-layout">
 
-        <section class="home-final-cta">
+                <div>
+                    <p class="eyebrow white-eyebrow">YOUR NEXT CHAPTER</p>
+                    <h2>See Yourself at UT.</h2>
+                </div>
 
-            <div class="container">
+                <div class="cta-buttons">
+                    <a href="admissions.html" class="btn button-light">
+                        ADMISSIONS →
+                    </a>
 
-
-                <div class="final-cta-grid">
-
-
-                    <div>
-
-                        <p class="eyebrow">
-                            READY FOR WHAT'S NEXT?
-                        </p>
-
-
-                        <h2>
-                            See Yourself at UT.
-                        </h2>
-
-                    </div>
-
-
-                    <div class="final-cta-actions">
-
-
-                        <a
-                            href="admissions.html"
-                            class="btn light-button"
-                        >
-                            EXPLORE ADMISSIONS →
-                        </a>
-
-
-                        <a
-                            href="visit.html"
-                            class="btn outline-button"
-                        >
-                            PLAN YOUR VISIT
-                        </a>
-
-
-                    </div>
-
-
+                    <a href="visit.html" class="btn button-outline-light">
+                        VISIT CAMPUS
+                    </a>
                 </div>
 
             </div>
 
         </section>
-
 
     </main>
 
 
-
-    <!-- =====================================
-         FOOTER
-    ====================================== -->
-
     <footer class="ut-footer">
-
         <div class="container">
-
 
             <div class="footer-main">
 
-
-                <div class="footer-brand">
-
-                    <img
-                        src="ut-logo.png"
-                        alt="The University of Tampa"
-                        class="footer-logo"
-                    >
-
-                </div>
-
+                <img src="ut-logo.png"
+                     alt="The University of Tampa"
+                     class="footer-logo">
 
                 <div class="footer-links">
-
-                    <a href="index.html">
-                        Home
-                    </a>
-
-                    <a href="about.html">
-                        About
-                    </a>
-
-                    <a href="programs.html">
-                        Programs
-                    </a>
-
-                    <a href="student-life.html">
-                        Student Life
-                    </a>
-
-                    <a href="admissions.html">
-                        Admissions
-                    </a>
-
-                    <a href="visit.html">
-                        Visit
-                    </a>
-
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="programs.html">Programs</a>
+                    <a href="student-life.html">Student Life</a>
+                    <a href="admissions.html">Admissions</a>
+                    <a href="visit.html">Visit</a>
                 </div>
 
-
             </div>
-
 
             <div class="footer-bottom">
-
-                <span>
-                    Student Recruitment Concept • WDPP Year 3
-                </span>
-
-                <span>
-                    Designed by Evie
-                </span>
-
+                
             </div>
 
-
         </div>
-
     </footer>
 
 
-
-    <!-- BOOTSTRAP JAVASCRIPT -->
-
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-    </script>
-
-
-    <!-- CUSTOM JAVASCRIPT -->
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 
-
 </body>
-
 </html>

@@ -1,156 +1,217 @@
-// ==========================================
-// UNIVERSITY OF TAMPA WEBSITE
-// ==========================================
+/* =========================================
+   UNIVERSITY OF TAMPA WEBSITE
+   SCRIPT
+========================================= */
 
 
-
-// ==========================================
-// HERO VIDEO PLAY / PAUSE
-// ==========================================
-
-const heroVideo = document.getElementById("heroVideo");
-
-const videoControl = document.getElementById("videoControl");
-
-const videoIcon = document.getElementById("videoIcon");
-
-const videoControlText =
-    document.getElementById("videoControlText");
+document.addEventListener("DOMContentLoaded", function () {
 
 
-if (heroVideo && videoControl) {
+    /* =====================================
+       HOME HERO VIDEO
+    ====================================== */
 
-    videoControl.addEventListener("click", function () {
+    const heroVideo = document.getElementById("heroVideo");
 
+    const videoControl =
+        document.getElementById("videoControl");
 
-        // IF VIDEO IS CURRENTLY PAUSED
+    const videoIcon =
+        document.getElementById("videoIcon");
 
-        if (heroVideo.paused) {
-
-            heroVideo.play();
-
-            videoIcon.textContent = "❚❚";
-
-            videoControlText.textContent = "PAUSE VIDEO";
-
-            videoControl.setAttribute(
-                "aria-label",
-                "Pause background video"
-            );
-
-        }
+    const videoControlText =
+        document.getElementById("videoControlText");
 
 
-        // IF VIDEO IS CURRENTLY PLAYING
+    if (heroVideo && videoControl) {
 
-        else {
+        videoControl.addEventListener("click", function () {
 
-            heroVideo.pause();
+            if (heroVideo.paused) {
 
-            videoIcon.textContent = "▶";
+                heroVideo.play();
 
-            videoControlText.textContent = "PLAY VIDEO";
+                videoIcon.textContent = "❚❚";
 
-            videoControl.setAttribute(
-                "aria-label",
-                "Play background video"
-            );
+                videoControlText.textContent =
+                    "PAUSE VIDEO";
 
-        }
-
-    });
-
-}
-
-
-
-// ==========================================
-// CLOSE MOBILE NAV AFTER CLICK
-// ==========================================
-
-const navLinks =
-    document.querySelectorAll(".navbar-nav .nav-link");
-
-const navbarCollapse =
-    document.querySelector(".navbar-collapse");
-
-
-navLinks.forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
-        if (
-            navbarCollapse &&
-            navbarCollapse.classList.contains("show")
-        ) {
-
-            const bootstrapCollapse =
-                bootstrap.Collapse.getOrCreateInstance(
-                    navbarCollapse
+                videoControl.setAttribute(
+                    "aria-label",
+                    "Pause background video"
                 );
 
-            bootstrapCollapse.hide();
+            } else {
 
-        }
+                heroVideo.pause();
+
+                videoIcon.textContent = "▶";
+
+                videoControlText.textContent =
+                    "PLAY VIDEO";
+
+                videoControl.setAttribute(
+                    "aria-label",
+                    "Play background video"
+                );
+
+            }
+
+        });
+
+    }
+
+
+
+    /* =====================================
+       MOBILE NAV
+    ====================================== */
+
+    const navLinks =
+        document.querySelectorAll(
+            ".navbar-collapse .nav-link"
+        );
+
+    const navbarCollapse =
+        document.querySelector(".navbar-collapse");
+
+
+    navLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            if (
+                navbarCollapse &&
+                navbarCollapse.classList.contains("show")
+            ) {
+
+                const collapse =
+                    bootstrap.Collapse.getOrCreateInstance(
+                        navbarCollapse
+                    );
+
+                collapse.hide();
+
+            }
+
+        });
 
     });
 
-});
 
 
+    /* =====================================
+       PROGRAM FILTER
+    ====================================== */
 
-// ==========================================
-// SCROLL REVEAL
-// ==========================================
+    const filterButtons =
+        document.querySelectorAll(".filter-button");
 
-const revealItems =
-    document.querySelectorAll(".reveal");
+    const programCards =
+        document.querySelectorAll(".program-card");
 
 
-if ("IntersectionObserver" in window) {
+    filterButtons.forEach(function (button) {
 
-    const observer = new IntersectionObserver(
+        button.addEventListener("click", function () {
 
-        function (entries) {
+            filterButtons.forEach(function (item) {
+                item.classList.remove("active");
+            });
 
-            entries.forEach(function (entry) {
 
-                if (entry.isIntersecting) {
+            button.classList.add("active");
 
-                    entry.target.classList.add("revealed");
 
-                    observer.unobserve(entry.target);
+            const selectedFilter =
+                button.dataset.filter;
+
+
+            programCards.forEach(function (card) {
+
+                const category =
+                    card.dataset.category;
+
+
+                if (
+                    selectedFilter === "all" ||
+                    category === selectedFilter
+                ) {
+
+                    card.classList.remove(
+                        "program-hidden"
+                    );
+
+                } else {
+
+                    card.classList.add(
+                        "program-hidden"
+                    );
 
                 }
 
             });
 
-        },
-
-        {
-            threshold: 0.15
-        }
-
-    );
-
-
-    revealItems.forEach(function (item) {
-
-        observer.observe(item);
+        });
 
     });
 
-}
 
 
-// FALLBACK FOR OLDER BROWSERS
+    /* =====================================
+       SCROLL REVEAL
+    ====================================== */
 
-else {
+    const revealItems =
+        document.querySelectorAll(".reveal");
 
-    revealItems.forEach(function (item) {
 
-        item.classList.add("revealed");
+    if ("IntersectionObserver" in window) {
 
-    });
+        const revealObserver =
+            new IntersectionObserver(
 
-}
+                function (entries, observer) {
+
+                    entries.forEach(function (entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add(
+                                "revealed"
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
+
+
+        revealItems.forEach(function (item) {
+            revealObserver.observe(item);
+        });
+
+
+    } else {
+
+        revealItems.forEach(function (item) {
+
+            item.classList.add("revealed");
+
+        });
+
+    }
+
+
+});
